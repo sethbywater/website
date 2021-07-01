@@ -1,0 +1,65 @@
+/* =================================================================== */
+/* BLUE #6e7ce1
+====================================================================== */
+a,
+a:hover,
+a:active,
+a:focus,
+.title-card-mobile,
+.personal-informations .buttons a.secondary,
+.latest-post .post-title a:hover,
+.sidebar ul.nav-tabs li a:hover,
+.widget.recent-posts .entry-title a:hover,
+.blog article a h4:hover,
+.comments-list .comment-reply,
+.blog .meta span i,
+.blog .meta a,
+.countdown-amount,
+.contact-page-info .contact-info-box i.big-icon,
+.title h2 span:nth-child(2),
+.resume-card-body.skills .resume-content i,
+.resume-card .resume-card-name {
+  color: #6e7ce1;
+}
+.latest-post .post-date,
+span.separator,
+.btn-primary,
+.widget-tags ul > li a:hover,
+.blog .pagination li.active a,
+.simplefilter li.active,
+.resume-list-item-inner,
+.badges,
+.testimonials,
+.logos,
+.personal-informations .buttons a:hover,
+.personal-informations .buttons a:focus,
+.personal-informations .buttons a:active {
+  background: #6e7ce1;
+}
+.contact-form .btn:focus,
+article .btn:focus,
+.comments-form .btn:focus,
+body.error-page .error a.btn:focus {
+	background: #6e7ce1 !important;
+}
+.top-section {
+	background: #6e7ce1;
+}
+.widget-tags ul > li a:hover,
+.blog .pagination li.active a,
+.resume-list-item.is-active{
+  border: 1px solid #6e7ce1 ;
+}
+.portfolio .caption h3 {
+	border-left:3px solid #6e7ce1;
+}
+.personal-informations .buttons a, .personal-informations .buttons a:focus {
+	border:2px solid #6e7ce1;
+}
+.zoom-icon {
+	 background: rgba(110, 124, 225,.7);
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background: rgba(110, 124, 225,.9);
+  outline: none !important;
+}
