@@ -114,7 +114,7 @@ pub fn render_index() -> Markup {
                                         }
                                         // Content
                                         .resume-card-body.personal-informations {
-                                            .col-xs-12 p-0 {
+                                            ."col-xs-12"."p-0" {
                                                 p.second-font {
                                                     "I'm currently finishing my degree in Mechatronics Technology at SUNY Delhi. During my time here, I've enjoyed getting my hands dirty designing controls systems and installing them myself. Learning 3D design and simulation has been another highlight."
                                                     br;
@@ -138,13 +138,79 @@ pub fn render_index() -> Markup {
                                                     a.btn.btn-primary href="/resume" {
                                                         i.fa.fa-file-pdf-o{} "Download my Resume"
                                                     }
+                                                    a.btn.btn-primary href="/coming-soon.html" {
+                                                        i.fa.fa-edit{} "Visit my blog"
+                                                    }
                                                     
                                                 }
                                             }
                                         }
                                     }
                                     // Personal information ends
-
+                                    // Experience starts
+                                    .resume-card."resume-card-1" data-index="1" {
+                                        // Header
+                                        .resume-card-header {
+                                            .resume-card-name { i.fa.fa-breifcase{} "Experience" }
+                                        }
+                                        // Content
+                                        .resume-card-body.experience {
+											.resume-card-body-container.second-font {
+												.resume-content {
+													h6.uppercase { span { "Barista - " } "Starbucks" }
+													span.date { i.fa.fa-calender-o{} "2020-present" }
+													p.sedond-font { "I can make a hell of a latte, but if you're reading this that's probably irrelevant" }
+												}
+												span.separator {}
+												.resume-content {
+													h6.uppercase { span { "President - " } "SUNY Delhi Student Athlete Advisory Council" }
+													span.date { i.fa.fa-calender-o{} "2019-present" }
+													p.sedond-font { "I coordinate events and campaings for student-athletes and the entire campus including sports events, social awareness campaings, and community service projects. " }
+												}
+											}
+										}
+                                    }
+                                    // Experience ends
+                                    // Education starts
+                                    .resume-card."resume-card-2" data-index="2" {
+                                        // Header
+                                        .resume-card-header {
+                                            .resume-card-name { i.fa.fa-graduation-cap{} "Education" }
+                                        }
+                                        // Content
+                                        .resume-card-body.experience {
+											.resume-card-body-container.second-font {
+												.resume-content {
+													h6.uppercase { span { "BT in Mechatronics Technology - " } "SUNY Delhi" }
+													span.date { i.fa.fa-calender-o{} "2019-2022" }
+													p.sedond-font { "3.97 GPA, honor's student, student-athlete. On track to complete a 4-year degree early." }
+													// TODO add sample coursework
+												}
+											}
+										}
+                                    }
+                                    // Education ends
+                                    // Skills starts
+                                    .resume-card."resume-card-3" data-index="3" {
+										// Header
+										.resume-card-header {
+                                            .resume-card-name { i.fa.fa-star{} "Skills" }
+                                        }
+                                        // Content
+                                        .resume-card-body.skills {
+											.resume-card-body-container.second-font {
+												.row {
+													."col-xs-6" {
+														.resume-content {
+															h6.uppercase { "Geometric Dimensioning and Tolerancing" }
+															p.sedond-font { i.fa-fa-star{}i.fa-fa-star{}i.fa-fa-star{}i.fa-fa-star{}i.fa-fa-star-o{} }
+														}
+													}
+												}
+											}
+										}
+									}
+                                    // Skills ends
                                 }
                             }
                             // Resume content ends
@@ -153,6 +219,13 @@ pub fn render_index() -> Markup {
                 }
             }
             // About section ends
+        // Template JS files
+        script src="js/jquery-2.2.4.min.js"{}
+        script src="js/bootstrap.min.js"{}
+        script src="js/jquery.animatedheadline.js"{}
+        script src="js/jquery.bxslider.min.j"{}
+        script src="js/jquery.magnific-popup.min.js"{}
+        script src="js/custom.js"{}
         }
         // Wrapper ends
     }

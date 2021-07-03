@@ -1,6 +1,7 @@
 #![feature(decl_macro)]
 
 mod index;
+mod test;
 use crate::index::render_index;
 
 use std::path::{Path, PathBuf};
