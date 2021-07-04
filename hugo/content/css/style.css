@@ -432,8 +432,7 @@ body .wrapper {
 }
 
 .resume-cards {
-  position: relative;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .resume-card.resume-card-1 {

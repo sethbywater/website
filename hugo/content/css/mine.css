@@ -1,0 +1,193 @@
+body {
+	font-family: "Times New Roman", Times, serif;
+	background-color: #E6E6E3;
+	font-size: 20px;
+}
+
+.main {
+	margin-left: auto;
+}
+
+hr.rounded {
+	border-top: 8px solid #00356B;
+	border-radius: 5px;
+}
+
+h1 {
+	font-size: 70px;
+	margin-left: 30%;
+	color: #00356B;
+}
+
+h2 {
+	background-color: #00356B;
+	color: white;
+	padding: 20px;
+	border-radius: 5px;
+	font-size: 40px;
+	box-shadow: 2px 2px 4px #000000;
+}
+
+.menu-btn {
+	position: fixed;
+	left: 10px;
+	top: 10px;
+	background-color: #00356B;
+	color: white;
+	font-size: 30px;
+	font-style: italic;
+	text-align: center;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	border-radius: 5px;
+	box-shadow: 2px 2px 4px #000000;
+}
+
+.date {
+	color: grey;
+	font-style: italic;
+	width: 150px;
+	text-align: right;
+	padding: 10px;
+}
+
+th.header {
+	text-align: left;
+}
+
+table.title {
+	padding-top: 60px;
+	padding-left: 0px;
+	height: 100px;
+	width: 100%;
+}
+
+.header {
+	color: #00356B;
+}
+
+th.title {
+	background-color: #00356B;
+	color: white;
+	font-size: 70px;
+	font-style: italic;
+	width: 50%;
+	text-align: right;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	border-radius: 5px;
+	box-shadow: 2px 2px 4px #000000;
+}
+
+th.subtitle {
+	color: #00356B;
+	font-size: 30px;
+	text-align: left;
+	padding-left: 30px;
+}
+
+.topbar {
+	position: fixed;
+	width: 100%;
+	height: 45px;
+	overflow: hidden;
+	background-color: #1E282D;
+	top: 0px;
+	left: 0px;
+	right: 0px;	
+	box-shadow: 2px 2px 4px #000000;
+}
+
+.topbar.left {
+	float: left;
+}
+
+.topbar.right {
+	float: right;
+}
+.topbar a {
+	float: left;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.topbar a:hover {
+	background-color: #797F8B;
+}
+
+.topbar a:active {
+	background-color: #797F8B;
+}
+
+.sidebar {
+	margin: 0;
+	padding: 0;
+	width: 15%;
+	background-color: #00356B;
+	position: fixed;
+	height: 100%;
+	overflow: auto;
+}
+
+.sidebar a {
+	display: block;
+	color: white;
+	padding: 16px;
+	text-decoration: none;
+}
+
+.sidebar a:hover {
+	background-color: #7A808C;
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.padded {
+	padding-top: 15px;
+	padding-left: 25%;
+	padding-right: 25%;
+	padding-bottom: 15px;
+}
+
+.card {
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	width: 750px;
+	padding: 25px;
+}
+
+.about-me {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	width: 750px;
+	padding: 25px;
+}
+
+/* Make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+	.sidebar {
+		width: 100%;
+		height: auto;
+		position: relative;
+		margin-left: 0;
+	}
+	.sidebar a { float: left; }
+}
+
+/* Display the bar vertically on phones */
+@media screen and (max-width: 400px) {
+	.sidebar a {
+		text-align: center;
+		float: none;
+	}
+}
