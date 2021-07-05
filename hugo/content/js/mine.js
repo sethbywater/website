@@ -10,3 +10,21 @@ function sidebar_close() {
 	document.getElementById("sidebar").style.display = "none";
 	document.getElementById("open-menu").style.display = "inline-block";
 }
+
+var frame = document.getElementById("frame");
+frame.onscroll = function() {
+	if frame.pageYOffset < 100 {
+		expand_topbar()
+	} else {
+		collapse_topbar()
+	}
+}
+function expand_topbar() {
+	document.getElementById("lil-topbar").style.display = "none";
+	document.getElementById("big-topbar").style.display = "block";
+}
+
+function collapse_topbar() {
+	document.getElementById("big-topbar").style.display = "none";
+	document.getElementById("lil-topbar").style.display = "block";
+}

@@ -1,43 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
 	<title>Seth Bywater</title>
-	<meta name="viewport" content="width=device-width, initial scale=1.0"/>
-	<link rel="stylesheet" href="css/mine.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<script src="js/mine.js"></script>
+	{{ partial "include-styles.html" }}
 </head>
-<body>
-	<!-- Topbar -->
-	<div class="topbar">
-		<a href="#">Home</a>
-		<a href="#">About Me</a>
-		<a href="#">Resume</a>
-		<a href="#">My Works</a>
-		<a href="#">Blog</a>
-		<a class="right">Also find me on: </a>
-		<a class="right" href="https://github.com/sethbywater" target="_blank"><i class="fa fa-github"></i></a>
-		<a class="right" href="https://www.linkedin.com/in/sethbywater/" target="_blank"><i class="fa fa-linkedin"></i></a>
-	</div>
-	
+<body id="frame">
+	<!-- Topbar -->	
 	<div id="main">
-		<div class="header">
-			<table class="title">
-				<tr>
-					<th class="title">
-						Seth Bywater
-					</th>
-					<th class="subtitle">
-						Also find me on:  /  
-						<a href="https://github.com/sethbywater" target="_blank"><i class="fa fa-github"></i></a>  /  
-						<a href="https://www.linkedin.com/in/sethbywater/" target="_blank"><i class="fa fa-linkedin"></i></a>
-					</th>
-				</tr>
-			</table>
-		</div>
+		{{ partial "big-topbar.html" . }}
 		<div class="about-me">
-			<h2>About Me</h2>
+			<h2>My Profile</h2>
 			<table>
 					<td>
 						<p>I'm currently finishing my degree in Mechatronics Technology at SUNY Delhi. During my time here, I've enjoyed getting my hands dirty designing controls systems and installing them myself. Learning 3D design and simulation has been another highlight.</p>
@@ -58,6 +30,18 @@
 					<td class="col-1"></td>
 					<td>
 						<p>I can make a hell of a latte, but if you're reading this that's probably irrelevant</p>
+					<td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<th class="date">2019-present</th>
+					<th class="header">President - SUNY Delhi Student Athlete Advisory Council</th>
+				</tr>
+				<tr>
+					<td class="col-1"></td>
+					<td>
+						<p>Coordinate events and campaings for student-athletes and the entire campus including sports events, social awareness campaings, and community service projects.</p>
 					<td>
 				</tr>
 			</table>
