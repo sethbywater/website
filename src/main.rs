@@ -1,22 +1,51 @@
 #![feature(decl_macro)]
 
-mod index;
-mod test;
-use crate::index::render_index;
+// mod content;
 
-use std::path::{Path, PathBuf};
-use rocket::response::NamedFile;
-use rocket::{get, routes, catch};
-use maud::Markup;
+// use crate::content::Content;
+
+use std::{
+    collections::HashMap,
+    path::{Path, PathBuf},
+    fs::read_to_string
+};
+use rocket::{
+    response::NamedFile,
+    get,
+    routes,
+    catch,
+};
+use rocket_contrib::templates::Template;
+use tera::{Context, Tera};
+use serde_json::json;
+use pulldown_cmark::{html, Parser};
+// use lazy_static::*;
+
+// Initialize templates
+// lazy_static! {
+//     static ref TERA: Tera = compile_templates!("layouts");
+// }
 
 #[get("/")]
-fn index() -> Markup {
-    render_index()
+fn index() -> Template {
+    let mut context = HashMap::<String, String>::new();
+    context.insert("content".to_string(), "Hello There!".to_string());
+    Template::render("index", context)
 }
 
 #[get("/resume")] 
-fn resume() -> Option<NamedFile> {
-    NamedFile::open(Path::new("/src/Bywater Resume.pdf")).ok()
+fn resume() -> Template {
+    let mut context = HashMap::<String, String>::new();
+    context.insert(
+        "content".to_string(),
+        read_to_string(Path::new("../templates/partials/resume.html")).expect("Could open resume")
+    );
+    Template::render("index", context)
+}
+
+#[get("/favicon.ico")]
+fn favicon() -> Option<NamedFile> {
+    NamedFile::open(Path::new("content/images/river-favicon.png")).ok()
 }
 
 #[get("/<file..>")]
@@ -31,6 +60,12 @@ fn not_found() -> Option<NamedFile> {
 
 fn main() {
     rocket::ignite()
-        .mount("/", routes![index, files])
+        .mount("/", routes![
+            index,
+            favicon,
+            resume,
+            files
+        ])
+        .attach(Template::fairing())
         .launch();
 }

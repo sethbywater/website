@@ -9,6 +9,7 @@ body {
 }
 
 .main {
+	margin-top: 50px;
 	margin-left: 0%;
 }
 
@@ -29,7 +30,18 @@ h2 {
 	padding: 20px;
 	border-radius: 5px;
 	font-size: 40px;
+	font-style: italic;
 	box-shadow: 2px 2px 4px #000000;
+}
+
+h3 {
+	color: #00356B;
+	font-size: 20px;
+}
+
+h3 em {
+	font-size: 25px;
+	color: #1E282D;
 }
 
 .menu-btn {
@@ -119,7 +131,6 @@ th a {
 	left: 0px;
 	right: 0px;	
 	box-shadow: 2px 2px 4px #000000;
-	transition: top 0.3s;
 }
 
 .topbar.left {
@@ -204,8 +215,36 @@ th a {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 20px;
-	width: 750px;
+	width: 850px;
 	padding: 25px;
+}
+
+.footer {
+	width: 100%;
+	background-color: #1E282D;
+	color: #797F8B;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	height: 75px;
+	text-align: center;
+}
+
+.footer p {
+	vertical-align: center;
+}
+
+@media screen and (max-width: 900px) {
+	.card { width: 100% }
+	.about-me { width: 100% }
+}
+
+a.resume-btn {
+	width: 100px;
+	margin-left: calc(50% - 50px);
+	height: 25px;
+	background-color: #1E282D;
+	color: white;
 }
 
 /* Make the sidebar into a topbar */
