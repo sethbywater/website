@@ -17,21 +17,6 @@ use serde_json::json;
 // use pulldown_cmark::{html, Parser};
 use lazy_static::lazy_static;
 
-
-/// Turns a sinlge content file into a page by placing it within the
-/// default template
-fn single_serve(path: &str) -> (ContentType, String) {
-    let mut context = Context::new();
-    context.insert("content", &TEMPLATES.render(path, &Context::new()).unwrap());
-    (
-        ContentType::HTML,
-        TEMPLATES.render(
-            "single.html.tera",
-            &context
-        ).unwrap()
-    )
-}
-
 #[get("/")]
 async fn index() -> (ContentType, String) {
     (ContentType::HTML, TEMPLATES.render("complete.html", &Context::new()).unwrap())
