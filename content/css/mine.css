@@ -18,13 +18,13 @@ hr.rounded {
 	border-radius: 5px;
 }
 
-h1 {
+.resume h1 {
 	font-size: 70px;
 	margin-left: 30%;
 	color: #00356B;
 }
 
-h2 {
+.resume h2 {
 	background-color: #00356B;
 	color: white;
 	padding: 20px;
@@ -34,32 +34,17 @@ h2 {
 	box-shadow: 2px 2px 4px #000000;
 }
 
-h3 {
+.resume h3 {
 	color: #00356B;
 	font-size: 20px;
 }
 
-h3 em {
+.resume h3 em {
 	font-size: 25px;
 	color: #1E282D;
 }
 
-.menu-btn {
-	position: fixed;
-	left: 10px;
-	top: 10px;
-	background-color: #00356B;
-	color: white;
-	font-size: 30px;
-	font-style: italic;
-	text-align: center;
-	padding-right: 20px;
-	padding-bottom: 10px;
-	border-radius: 5px;
-	box-shadow: 2px 2px 4px #000000;
-}
-
-.date {
+.resume.date {
 	color: grey;
 	font-style: italic;
 	width: 150px;
@@ -67,11 +52,11 @@ h3 em {
 	padding: 10px;
 }
 
-th.header {
+.resume th.header {
 	text-align: left;
 }
 
-table.title {
+.resume table.title {
 	padding-top: 30px;
 	left: 0px;
 	height: 100px;
@@ -79,10 +64,6 @@ table.title {
 	position: fixed;
 	background-color: #1E282D;
 	box-shadow: 2px 2px 4px #000000;
-}
-
-.header {
-	color: #00356B;
 }
 
 th.title {
@@ -104,21 +85,6 @@ th.subtitle {
 
 th a {
 	color: white;
-}
-
-.big-name {
-	background-color: #797F8B;
-	color: white;
-	position: fixed;
-	top: 0;
-	margin-left: calc(50% - 262.5px);
-	font-size: 70px;
-	font-style: italic;
-	text-align: center;
-	height: 90px;
-	z-index: 999;
-	border-radius: 5px;
-	width: 525px;
 }
 
 .topbar {

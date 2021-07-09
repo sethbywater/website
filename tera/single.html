@@ -1,31 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	{% block head %}
-	<title>{% block title %}{% endblock title %}</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial scale=1.0"/>
-	<link rel="stylesheet" href="css/mine.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<script src="js/mine.js"></script>
-	{% endblock head %}
-</head>
-<body>
-	<div class="topbar" id="big-topbar">
-		<a class="name" href="#">Seth Bywater</a>
-		<a href="#">About Me</a>
-		<a href="#">Resume</a>
-		<a href="#">My Works</a>
-		<a href="#">Blog</a>
-		<div style="float: right">
-			<a class="words">Also find me on: </a>
-			<a href="https://github.com/sethbywater"><i class="fa fa-github"></i></a>
-			<a href="https://www.linkedin.com/in/sethbywater/"><i class="fa fa-linkedin"></i></a>
-		</div>
-	</div>
-	{% block content %}{% endblock content %}
-	<div class="footer">
-		<p>Copyright Seth Bywater</p>
-	</div>
-</body>
-</html>
+{% extends "index.html" %}
+{% block title %}{{ title }}{% endblock title %}
+{% block head %}{{ super() }}{% endblock head %}
+{% block content %}
+<div class="card">
+    {{ get_md(name=title) }}
+</div>
+{% endblock content %}
