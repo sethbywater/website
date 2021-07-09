@@ -1,79 +1,61 @@
 #![feature(decl_macro)]
 
-// mod content;
-
-// use crate::content::Content;
-
 use std::{
-    collections::HashMap,
     path::{Path, PathBuf},
     fs::read_to_string
 };
 use rocket::{
-    response::NamedFile,
+    response::Responder,
+    http::ContentType,
+    fs::NamedFile,
     get,
     routes,
-    catch,
 };
 use rocket_contrib::templates::Template;
 use tera::{Context, Tera};
 use serde_json::json;
-use pulldown_cmark::{html, Parser};
+// use pulldown_cmark::{html, Parser};
 use lazy_static::lazy_static;
 
 
 /// Turns a sinlge content file into a page by placing it within the
 /// default template
-fn single_serve(path: &str) -> Template {
-    let content = read_to_string(Path::new(path)).expect("Found target content");
-    Template::render(
-        "single",
-        json!({
-            "content": content,
-        })
+fn single_serve(path: &str) -> (ContentType, String) {
+    let mut context = Context::new();
+    context.insert("content", &TEMPLATES.render(path, &Context::new()).unwrap());
+    (
+        ContentType::HTML,
+        TEMPLATES.render(
+            "single.html.tera",
+            &context
+        ).unwrap()
     )
 }
 
 #[get("/")]
-fn index() -> String {
-    // single_serve("templates/partials/resume.html")
-    let mut content = Context::new();
-    content.insert("content", "hiiiii");
-    TEMPLATES.render(
-        "index.html.tera",
-        &content
-    ).unwrap()
+async fn index() -> (ContentType, String) {
+    (ContentType::HTML, TEMPLATES.render("complete.html", &Context::new()).unwrap())
 }
 
 #[get("/resume")] 
-fn resume() -> String {
-    let mut context = Context::new();
-    context.insert(
-        "content",
-        &TEMPLATES.render("partials/resume.html.tera", &Context::new()).expect("Could open resume")
-    );
-    TEMPLATES.render("index.html.tera", &context).unwrap()
+async fn resume() -> (ContentType, String) {
+    (ContentType::HTML, TEMPLATES.render("resume.html", &Context::new()).unwrap())
 }
 
 #[get("/favicon.ico")]
-fn favicon() -> Option<NamedFile> {
-    NamedFile::open(Path::new("content/images/river-favicon.png")).ok()
+async fn favicon() -> Option<NamedFile> {
+    files(PathBuf::from("content/images/river-favicon.png")).await
 }
 
 #[get("/<file..>")]
-fn files(file: PathBuf) -> Option<NamedFile> {
-    NamedFile::open(PathBuf::from("content").join(file)).ok()
-}
-
-#[catch(404)]
-fn not_found() -> Option<NamedFile> {
-    NamedFile::open(Path::new("src/404.html")).ok()
+async fn files(file: PathBuf) -> Option<NamedFile> {
+    NamedFile::open(PathBuf::from("content").join(file)).await.ok()
 }
 
 lazy_static! { // Allows non-const functions to be called
-    static ref TEMPLATES: Tera = match Tera::new("templates/**/*.html.tera") {
+    static ref TEMPLATES: Tera = match Tera::new("tera/*.html") {
         Ok(mut t) => {
-            t.autoescape_on(vec!["html", "html.tera"]);
+            t.autoescape_on(vec!["html"]);
             t
         },
         Err(e)=> {
@@ -83,16 +65,14 @@ lazy_static! { // Allows non-const functions to be called
     };
 }
 
-fn main() {
-    println!("pwd: {}", std::env::current_dir().unwrap().display());
-    let resume: String = read_to_string("templates/partials/resume.html").expect("Could open resume");
-    rocket::ignite()
+#[rocket::main]
+async fn main() {
+    let _= rocket::build()
         .mount("/", routes![
             index,
             favicon,
             resume,
-            files
+            files,
         ])
-        .attach(Template::fairing())
-        .launch();
+        .launch().await;
 }

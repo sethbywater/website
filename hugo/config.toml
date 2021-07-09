@@ -4,4 +4,4 @@ title = "Seth Bywater"
 theme = "hugo-base16-theme"
 
 [permalinks]
-posts = "/:year/:month/:title/"
+posts = "/:filename/"

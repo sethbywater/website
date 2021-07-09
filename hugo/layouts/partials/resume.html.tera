@@ -1,0 +1,92 @@
+<a class="resume-btn" href="Bywater Resume.pdf">Download Resume</a>
+<div class="about-me">
+	<h2>My Profile</h2>
+		<table>
+			<td>
+				<p>I'm currently finishing my degree in Mechatronics Technology at SUNY Delhi. During my time here, I've enjoyed getting my hands dirty designing controls systems and installing them myself. Learning 3D design and simulation has been another highlight.</p>
+				<p>Programming, mostly in Rust, has been a personal pursuit of mine. Even without a formal education, the spirit of optimization and creative problem solving which drew me to engineering is as present in algorithms as it is in electric motor design.</p>
+				<p>When I'm not working on projects, I'm either out for a run or working at the cafe.</p>
+			<td>
+		</tr>
+	</table>
+</div>
+<div class="card">
+	<h2>Experience</h2>
+	<h3><em>President</em><br>SUNY Delhi Student Athlete Advisory Council</h3>
+	<p>2019 - present</p>
+	<p>Coordinate events and campaings for student-athletes and the entire campus including sports events, social awareness campaings, and community service projects.</p>
+	<table>
+		<tr>
+			<th class="date">2019-present</th>
+			<th class="header">President - SUNY Delhi Student Athlete Advisory Council</th>
+		</tr>
+		<tr>
+			<td class="col-1"></td>
+			<td>
+				<p>Coordinate events and campaings for student-athletes and the entire campus including sports events, social awareness campaings, and community service projects.</p>
+			<td>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<th class="date">2020-present</th>
+			<th class="header">Barista - Starbucks</th>
+		</tr>
+		<tr>
+			<td class="col-1"></td>
+			<td>
+				<p>I can make a hell of a latte, but if you're reading this that's probably irrelevant</p>
+			<td>
+		</tr>
+	</table>
+</div>
+<div class="card">
+	<h2>Education</h2>
+	<table>
+		<tr>
+			<th class="date">2019 - 2022</th>
+			<th class="header">BT in Mechatronics Technology - SUNY Delhi</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>3.97 GPA, honor's student, student-athlete. On track to complete a 4-year degree early.</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				<br>
+				<em style="color: grey; font-style: italic; font-weight: bold">Sample Coursework</em>
+				<ul>
+					<li>Electric Motor Theory</li>
+					<li>Engineering Economics</li>
+					<li>Electrical Troubleshooting</li>
+					<li>Geometric Dimensioning & Tolerancing</li>
+					<li>Feedback & Controls Systems</li>
+					<li>Manufacturing & Materials Processing</li>
+	</table>
+</div>
+<div class="card">
+	<h2>Skills</h2>
+	<h3><em>Instrumentation Controls</em></h3>
+	<ul>
+		<li>Mechanical, electrical/electronic design</li>
+		<li>Combined electromechanical systems</li>
+		<li>Testing and analysis</li>
+	</ul>
+	<h3><em>Equipment</em></h3>
+	<ul>
+		<li>Electric motors</li>
+		<li>VFD controllers</li>
+		<li>Programmable Logic Controllers (PLCs)</li>
+		<li>3D printers</li>
+		<li>PCB design</li>
+	</ul>
+	<h3><em>Software</em></h3>
+	<ul>
+		<li>Rust / C++ / Python</li>
+		<li>AutoCAD</li>
+		<li>SolidEdge / SolidWorks / NX / Inventor</li>
+		<li>Matlab</li>
+		<li>Basic algorithms</li>
+	</ul>
+</div>

@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+	{% block head %}
+	<title>{% block title %}{% endblock title %}</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial scale=1.0"/>
 	<link rel="stylesheet" href="css/mine.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<script src="js/mine.js"></script>
+	{% endblock head %}
 </head>
 <body>
 	<div class="topbar" id="big-topbar">
@@ -20,7 +23,7 @@
 			<a href="https://www.linkedin.com/in/sethbywater/"><i class="fa fa-linkedin"></i></a>
 		</div>
 	</div>
-	{{ content }}
+	{% block content %}{% endblock content %}
 	<div class="footer">
 		<p>Copyright Seth Bywater</p>
 	</div>
