@@ -1,7 +1,0 @@
-baseURL = "http://sethbywater.com/"
-languageCode = "en-us"
-title = "Seth Bywater"
-theme = "hugo-base16-theme"
-
-[permalinks]
-posts = "/:filename/"
