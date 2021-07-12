@@ -1,0 +1,59 @@
+a.resume-btn {
+	display: block;
+	width: 225px;
+	margin-left: calc(50% - 112px);
+	height: 45px;
+	background-color: #1E282D;
+	color: white;
+	border-radius: 5px;
+	text-align: center;
+	padding-top: 15px;
+}
+
+.resume h1 {
+	font-size: 70px;
+	margin-left: 30%;
+	color: #00356B;
+}
+
+.resume h2 {
+	background-color: #00356B;
+	color: white;
+	padding: 20px;
+	border-radius: 5px;
+	font-size: 40px;
+	font-style: italic;
+	box-shadow: 2px 2px 4px #000000;
+}
+
+.resume h3 {
+	color: #00356B;
+	font-size: 20px;
+}
+
+.resume h3 em {
+	font-size: 25px;
+	color: #1E282D;
+}
+
+.resume th.date {
+	color: grey;
+	font-style: italic;
+	width: 150px;
+	text-align: right;
+	padding: 10px;
+}
+
+.resume th.header {
+	text-align: left;
+}
+
+.resume table.title {
+	padding-top: 30px;
+	left: 0px;
+	height: 100px;
+	width: 100%;
+	position: fixed;
+	background-color: #1E282D;
+	box-shadow: 2px 2px 4px #000000;
+}

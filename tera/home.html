@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+{% block head %}
+	{{ super() }}
+	{% block title %}Seth Bywater{% endblock title %}
+	<link rel="stylesheet" href="css/home.css">
+{% endblock head %}
+{% block content %}
+<div class="card">
+    <div class="left">
+        <p class="heading">Seth Bywater</p>
+        <p>I'm a student of Mechatronics Technology at SUNY Delhi, set to graduate this May.</p>
+        <p>
+            During my time here, I've enjoyed getting my hands dirty designing controls systems and installing them myself. 
+            I've also experienced higher-level programming, mostly in Rust. 
+            The melding of hardware and controls is a great interest of mine.
+        </p>
+        <p>
+            In my free time, I'm either running or working at the cafe.
+            I've been running cross country and track since middle school, and have
+            been working as a barista for about a year.
+        </p>
+        <p>
+            I am open to offers for work or internships - please contact me at 
+            <a href="mailto:contact@sethbywater.com">contact@sethbywater.com</a>
+        </p>
+    </div>
+    <div class="right">
+        <img src="images/sitting-pic.jpg">
+    </div>
+</div>
+{% endblock content %}

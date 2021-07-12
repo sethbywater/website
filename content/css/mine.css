@@ -10,7 +10,6 @@ body {
 
 .main {
 	margin-top: 50px;
-	margin-left: 0%;
 }
 
 hr.rounded {
@@ -128,10 +127,6 @@ th a {
 	font-style: italic;
 	overflow: visible;
 	background-color: #797F8B;
-}
-
-.titlebar {
-	
 }
 
 .sidebar {

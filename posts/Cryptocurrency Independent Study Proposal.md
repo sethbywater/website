@@ -1,4 +1,7 @@
-# Cryptocurrecny Independant Study Proposal
+# Cryptocurrency Independent Study Proposal
+*May 2021*
+
+---
 
 As part of my membership in the honor's program an SUNY Delhi, I may complete an independent study to fulfill an honor's credit. For the fall 2021 semester, I chose to study cryptocurrency.
 

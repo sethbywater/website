@@ -20,7 +20,7 @@ use crate::posts::Posts;
 
 #[get("/")]
 async fn index() -> (ContentType, String) {
-    (ContentType::HTML, TEMPLATES.render("complete.html", &Context::new()).unwrap())
+    (ContentType::HTML, TEMPLATES.render("home.html", &Context::new()).unwrap())
 }
 
 #[get("/resume")] 
@@ -28,8 +28,17 @@ async fn resume() -> (ContentType, String) {
     (ContentType::HTML, TEMPLATES.render("resume.html", &Context::new()).unwrap())
 }
 
-#[get("/blog/<title>")]
-async fn blog_post(title: String) -> (ContentType, String) {
+#[get("/works")] 
+async fn works() -> (ContentType, String) {
+    (ContentType::HTML, TEMPLATES.render("works.html", &Context::new()).unwrap())
+}
+
+#[get("/blog")] 
+async fn blog() -> (ContentType, String) {
+    (ContentType::HTML, TEMPLATES.render("blog.html", &Context::new()).unwrap())
+}
+#[get("/post/<title>")]
+async fn post(title: String) -> (ContentType, String) {
     let mut context = Context::new();
     context.insert("title", &title);
     context.insert("content", POSTS.get(title).expect("Could not find post"));
@@ -86,7 +95,9 @@ async fn main() {
         .mount("/", routes![
             index,
             resume,
-            blog_post,
+            works,
+            blog,
+            post,
             favicon,
             files,
         ])

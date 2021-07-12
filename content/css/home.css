@@ -1,0 +1,32 @@
+.card {
+    width: 950px;
+    height: 500px;
+}
+
+.left {
+    float: left;
+    width: 485px;
+}
+
+.right {
+    float: right;
+    width: 445px;
+}
+
+.heading {
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+img {
+    width: 400px;
+    display: inline;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+    .card { width: 100% }
+    .left { width: 90% }
+    .right { width: 90% }
+}

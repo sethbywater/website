@@ -1,0 +1,98 @@
+body {
+	font-family: "Times New Roman", Times, serif;
+	background-color: #E6E6E3;
+	font-size: 20px;
+}
+
+.main {
+	margin-top: 100px;
+}
+
+.topbar {
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	overflow: hidden;
+	background-color: #1E282D;
+	top: 0px;
+	left: 0px;
+	right: 0px;	
+	box-shadow: 2px 2px 4px #000000;
+}
+
+.topbar.left {
+	float: left;
+}
+
+.topbar.right {
+	float: right;
+}
+.topbar a {
+	float: left;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+.topbar a:hover:not(.words) {
+	background-color: #797F8B;
+}
+
+.topbar a:active {
+	background-color: #797F8B;
+}
+
+.topbar a.name {
+	height: 70px;
+	font-style: italic;
+	overflow: visible;
+	background-color: #797F8B;
+}
+
+.card {
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+    margin-top: 50px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	width: 850px;
+	padding: 25px;
+}
+
+.about-me {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	width: 850px;
+	padding: 25px;
+}
+
+footer {
+	width: 100%;
+	color: #797F8B;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	height: 75px;
+	text-align: center;
+}
+
+footer p {
+	vertical-align: center;
+}
+
+footer a {
+	color: #797F8B;
+}
+
+footer hr {
+	width: 300px;
+}
+
+@media screen and (max-width: 900px) {
+	.card { width: 100% }
+	.about-me { width: 100% }
+}

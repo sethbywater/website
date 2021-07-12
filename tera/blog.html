@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+{% block head %}
+	{{ super() }}
+	{% block title %}Blog - Seth Bywater{% endblock title %}
+	<link rel="stylesheet" href="css/blog.css">
+{% endblock head %}
+{% block content %}
+<div class="card">
+    <h1>Recent posts</h1>
+    <p><h2><a href="/post/The point of this website">The point of this website</a></h2>
+        July 11 2021
+    </p>
+    <p><h2><a href="/post/Cryptocurrency Independent Study Proposal">Cryptocurrency Independent Study Proposal</a></h2>
+        May 2021
+    </p>
+
+</div>
+{% endblock content %}
