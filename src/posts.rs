@@ -2,9 +2,7 @@ use std::{collections::BTreeMap, path::PathBuf};
 use std::fs::read_to_string;
 use glob::{glob, GlobError};
 use pulldown_cmark::{html, Parser};
-use serde::Serialize;
 
-#[derive(Serialize)]
 pub struct Posts (Box<BTreeMap<PathBuf, String>>);
 
 impl Posts {
