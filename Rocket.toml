@@ -1,7 +1,7 @@
-[development]
-address = "localhost"
+[debug]
+address = "127.0.0.1"
 port = 8000
 
-[production]
+[release]
 address = "167.99.59.231"
 port = 80
