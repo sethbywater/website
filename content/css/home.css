@@ -1,6 +1,6 @@
 .card {
     width: 950px;
-    height: 500px;
+    height: 520px;
 }
 
 .left {
@@ -14,7 +14,7 @@
 }
 
 .heading {
-    font-size: 30px;
+    font-size: 40px;
     font-style: italic;
     font-weight: bold;
 }
@@ -25,8 +25,12 @@ img {
     border-radius: 5px;
 }
 
-@media screen and (max-width: 1000px) {
-    .card { width: 100% }
-    .left { width: 90% }
-    .right { width: 90% }
+@media screen and (max-width: 800px) {
+	.card {
+    		width: 100%;
+		height: 1000px;
+	}
+	.left { width: 90% }
+	.right { width: 90% }
+	img { width: 300px; }
 }
