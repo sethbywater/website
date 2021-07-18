@@ -60,6 +60,6 @@ The focus of research of every week will be, preliminarily:
 10. Public privacy
 11. Taxes and laws of cryptocurrency
 12. Public records and blockchain
-13. Possibility of government-maintained
+13. Possibility of government-maintained cryptographic networks
 14. Presentation
 15. Review of presentation, paper, and independent study
