@@ -3,6 +3,7 @@ use std::fs::read_to_string;
 use glob::{glob, GlobError};
 use pulldown_cmark::{html, Parser};
 
+/// Contains all of the HTML generated from the markdown in the given glob
 pub struct Posts (Box<BTreeMap<PathBuf, String>>);
 
 impl Posts {
@@ -11,8 +12,6 @@ impl Posts {
         for entry in glob(path).expect("Failed to read glob pattern") {
             match entry {
                 Ok(title) => {
-                    // The content is moved three times by my count, 
-                    // but it happens at compile time so who cares
                     println!("Found post: {:?}", title);
                     let content = read_to_string(&title).expect("Failed to read file");
                     let parser = Parser::new(&content);

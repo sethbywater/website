@@ -67,7 +67,7 @@ fn get_md() -> impl Function {
     })
 }
 
-lazy_static! { // Allows non-const functions to be called
+lazy_static! { 
     static ref TEMPLATES: Tera = match Tera::new("tera/*.html") {
         Ok(mut t) => {
             t.autoescape_on(vec![]);
