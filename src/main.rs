@@ -41,7 +41,6 @@ async fn blog() -> (ContentType, String) {
 async fn post(title: String) -> (ContentType, String) {
     let mut context = Context::new();
     context.insert("title", &title);
-    context.insert("content", POSTS.get(title).expect("Could not find post"));
     (ContentType::HTML, TEMPLATES.render("single.html", &context).unwrap())
 }
 
