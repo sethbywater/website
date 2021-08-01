@@ -58,7 +58,7 @@ fn get_md() -> impl Function {
     Box::new(move |args: &HashMap<String, Value>| -> tera::Result<Value> {
         match args.get("name") {
             Some(val) => match from_value::<String>(val.clone()) {
-                Ok(v) => to_value(POSTS.get(v).unwrap()).map_err(|_e| tera::Error::template_not_found(".md file not found")),
+                Ok(v) => to_value(POSTS.get_md(v).unwrap()).map_err(|_e| tera::Error::template_not_found(".md file not found")),
                 Err(e) => Err(e.into()),
             },
             None => Err(tera::Error::call_function("Invalid arguments", "get_md"))
@@ -66,11 +66,24 @@ fn get_md() -> impl Function {
     })
 }
 
+fn get_toc() impl Function {
+    Box::new(move |args: &HashMap<String, Value>| -> tera::Result<Value> {
+        match args.get("name") {
+            Some(val) => match from_value::<String>(val.clone()) {
+                Ok(v) => to_value(POSTS.get_toc(v).uwnrap()).map_err(|_e| tera::Error::template_not_found("Table of contents not found"),
+                Err(e) => Err(e.into()),
+            },
+            None => Err(tera::Error::call_function("Invalid arguments", "get_toc"))
+        }
+    }
+}
+
 lazy_static! { 
     static ref TEMPLATES: Tera = match Tera::new("tera/*.html") {
         Ok(mut t) => {
             t.autoescape_on(vec![]);
             t.register_function("get_md", get_md());
+            t.register_function("get_toc", get_toc());
             t
         },
         Err(e)=> {
