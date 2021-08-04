@@ -1,8 +1,13 @@
 {% extends "index.html" %}
 {% block title %}{{ title }}{% endblock title %}
-{% block head %}{{ super() }}{% endblock head %}
+{% block head %}
+	{{ super() }}
+	<link href="/css/markdown.css" rel="stylesheet">
+{% endblock head %}
 {% block content %}
 <div class="card">
-    {{ get_md(name=title) }}
+	<article class="markdown-body">
+		{{ get_md(name=title) }}
+	</article>
 </div>
 {% endblock content %}
