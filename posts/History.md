@@ -104,9 +104,9 @@ One thing missing from this timeline is legislation: there have been no major ev
 
 _Convinience links provided as asteriks_
 
-[^1]:[*](https://www.anf.es/pdf/Haber_Stornetta.pdf)Haber, Stuart, and W. S. Stornetta. "How to Time-Stamp a Digital Document." _CRYPTO'90: Advances in Cryptology_, 1991, pp. 437-455.
+[^1]: [*](https://www.anf.es/pdf/Haber_Stornetta.pdf) Haber, Stuart, and W. S. Stornetta. "How to Time-Stamp a Digital Document." _CRYPTO'90: Advances in Cryptology_, 1991, pp. 437-455.
 
-[^2]:[*](https://link.springer.com/content/pdf/10.1007%2F3-540-48071-4_10.pdf)Dwork, Cynthia, and Moni Naor. "Pricing via Processing or Combatting Junk Mail." _CRYPTO’ 92: Advances in Cryptology_, 1992, pp. 139-147. 
+[^2]: [*](https://link.springer.com/content/pdf/10.1007%2F3-540-48071-4_10.pdf) Dwork, Cynthia, and Moni Naor. "Pricing via Processing or Combatting Junk Mail." _CRYPTO’ 92: Advances in Cryptology_, 1992, pp. 139-147. 
 
 [^3]: Szabo, Nick. "The God Protocols." _Satoshi Nakamoto Institute_, 1997, [nakamotoinstitute.org/the-god-protocols/](http://www.nakamotoinstitute.org/the-god-protocols/).
 
@@ -128,7 +128,7 @@ _Convinience links provided as asteriks_
 
 [^13]: Harding, LaToya. "The History of Dogecoin, the Joke Currency That's Worth More Than Barclays and Lloyds." Yahoo Finance, 17 Apr. 2021, [finance.yahoo.com/news/the-history-of-dogecoin-the-joke-currency-thats-worth-more-than-barclays-and-lloyds-123540957.html](http://finance.yahoo.com/news/the-history-of-dogecoin-the-joke-currency-thats-worth-more-than-barclays-and-lloyds-123540957.html).
 
-[^14]: [*](https://bitcoin.org/bitcoin.pdf)Nakamoto, Satoshi. "Bitcoin: A Peer-to-Peer Electronic Cash System." 31 Oct. 2008.
+[^14]: [*](https://bitcoin.org/bitcoin.pdf) Nakamoto, Satoshi. "Bitcoin: A Peer-to-Peer Electronic Cash System." 31 Oct. 2008.
 
 [^15]: Siegel, David. "Understanding the DAO Attack." CoinDesk, 25 June 2016, [coindesk.com/markets/2016/06/25/understanding-the-dao-attack/](http://coindesk.com/markets/2016/06/25/understanding-the-dao-attack/).
 
