@@ -1,7 +1,21 @@
+.card {
+	background-color: white;
+	box-shadow: 2px 2px 4px #dddddd;
+}
+
+.resume-title {
+	text-align: center;
+	font-style: italic;
+	font-weight: bold;
+	color: #00356B;
+	font-size: 60px;
+	padding: 20px;
+}
+
 a.resume-btn {
 	display: block;
-	width: 225px;
-	margin-left: calc(50% - 112px);
+	width: 125px;
+	margin-left: calc(50% - 62px);
 	height: 45px;
 	background-color: #1E282D;
 	color: white;

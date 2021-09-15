@@ -1,6 +1,6 @@
 .card {
     width: 950px;
-    height: 575px;
+    height: 600px;
 }
 
 .left {
@@ -23,6 +23,12 @@ img {
     width: 400px;
     display: inline;
     border-radius: 5px;
+}
+
+.resume {
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 25px;
 }
 
 @media screen and (max-width: 800px) {
