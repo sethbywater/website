@@ -1,6 +1,8 @@
 # Arguments and Attacks Against Cryptocurrency
-_23 Spetember 2021_
 
+_23 September 2021_
+
+---
 
 Most of the media surrounding Bitcoin, Ethereum, and other similar projects is overwhelmingly positive. This may be due to people's heavy financial and emotional investments in the crypto space, or the real value in the technology. In any case, the disproportionate amount of positivity means that in order to understand the reasons _not_ to be a proponent of the technology, one needs to dedicate a search specifically for them.
 
