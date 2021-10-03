@@ -1,112 +1,50 @@
-{% extends "index.html" %}
-{% block head %}
-	{{ super() }}
-	{% block title %}Seth Bywater{% endblock title %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Seth Bywater</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial scale=1.0"/>
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/home.css">
-	<link rel="stylesheet" href="css/resume.css">
-{% endblock head %}
-{% block content %}
-<div class="card">
-    <div class="left">
-        <p class="heading">Seth Bywater</p>
-        <p>I'm a student of Mechatronics Technology at SUNY Delhi, set to graduate this May.</p>
-        <p>
-            During my time here, I've enjoyed getting my hands dirty designing controls systems and installing them myself. 
-            I've also experienced higher-level programming, mostly in Rust. 
-            The melding of hardware and controls is a great interest of mine.
-        </p>
-        <p>
-            In my free time, I'm either running or working at the cafe.
-            I've been running cross country and track since middle school, and have
-            been working as a barista for about a year.
-        </p>
-        <p>
-            I am open to offers for work or internships - please contact me at 
-            <a href="mailto:contact@sethbywater.com">contact@sethbywater.com</a>
-        </p>
-    </div>
-    <div class="right">
-        <img src="images/sitting-pic.jpg">
-    </div>
-</div>
-<div class="resume">
-	<div class="resume-title">Resume</div>
-	<a class="resume-btn" href="Bywater Resume.pdf">Download</a>
-	<div class="middle">
-		<h2>Experience</h2>
-		<table>
-			<tr>
-				<th class="date">2019-present</th>
-				<th class="header">President - SUNY Delhi Student Athlete Advisory Council</th>
-			</tr>
-			<tr>
-				<td class="col-1"></td>
-				<td>
-					<p>Coordinate events and campaings for student-athletes and the entire campus including sports events, social awareness campaings, and community service projects.</p>
-				<td>
-			</tr>
-		</table>
-		<table>
-			<tr>
-				<th class="date">2020-present</th>
-				<th class="header">Barista - Starbucks</th>
-			</tr>
-			<tr>
-				<td class="col-1"></td>
-				<td>
-					<p>I can make a hell of a latte, but if you're reading this that's probably irrelevant</p>
-				<td>
-			</tr>
-		</table>
-		<h2>Education</h2>
-		<table>
-			<tr>
-				<th class="date">2019 - 2022</th>
-				<th class="header">BT in Mechatronics Technology - SUNY Delhi</th>
-			</tr>
-			<tr>
-				<td></td>
-				<td>3.97 GPA, honor's student, student-athlete. On track to complete a 4-year degree early.</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>
-					<br>
-					<em style="color: grey; font-style: italic; font-weight: bold">Sample Coursework</em>
-					<ul>
-						<li>Electric Motor Theory</li>
-						<li>Engineering Economics</li>
-						<li>Electrical Troubleshooting</li>
-						<li>Geometric Dimensioning & Tolerancing</li>
-						<li>Feedback & Controls Systems</li>
-						<li>Manufacturing & Materials Processing</li>
-					</ul>
-				</td>
-			</tr>
-		</table>
-		<h2>Skills</h2>
-		<h3><em>Instrumentation Controls</em></h3>
-		<ul>
-			<li>Mechanical, electrical/electronic design</li>
-			<li>Combined electromechanical systems</li>
-			<li>Testing and analysis</li>
-		</ul>
-		<h3><em>Equipment</em></h3>
-		<ul>
-			<li>Electric motors</li>
-			<li>VFD controllers</li>
-			<li>Programmable Logic Controllers (PLCs)</li>
-			<li>3D printers</li>
-			<li>PCB design</li>
-		</ul>
-		<h3><em>Software</em></h3>
-		<ul>
-			<li>Rust / C++ / Python</li>
-			<li>AutoCAD</li>
-			<li>SolidEdge / SolidWorks / NX / Inventor</li>
-			<li>Matlab</li>
-			<li>Basic algorithms</li>
-		</ul>
+</head>
+<body>
+	<div class="topbar">
+		<a class="name" href="/">Seth Bywater</a>
+		<a href="/resume">Resume</a>
+		<a href="/blog">Blog</a>
+		<div style="float: right">
+			<a class="words">Also find me on: </a>
+			<a href="https://github.com/sethbywater"><i class="fa fa-github"></i></a>
+			<a href="https://www.linkedin.com/in/sethbywater/"><i class="fa fa-linkedin"></i></a>
+		</div>
 	</div>
-</div>
-{% endblock content %}
+	<div class="main">
+		<div class="card">
+			<div class="left">
+				<p class="heading">Seth Bywater</p>
+				<p>I'm a student of Mechatronics Technology at SUNY Delhi, set to graduate this May.</p>
+				<p>During my time here, I've enjoyed getting my hands dirty designing controls systems and installing them myself. 
+					I've also experienced higher-level programming, mostly in Rust. 
+					The melding of hardware and controls is a great interest of mine.
+				</p>
+				<p>In my free time, I'm either running or working at the cafe.
+					I've been running cross country and track since middle school, and have
+					been working as a barista for about a year.
+				</p>
+				<p>I am open to offers for work or internships - please contact me at 
+					<a href="mailto:contact@sethbywater.com">contact@sethbywater.com</a>
+				</p>
+			</div>
+			<div class="right">
+				<img src="images/sitting-pic.jpg">
+			</div>
+		</div>
+	</div>
+	<footer>
+		<hr>
+		<p>Author: Seth Bywater<br>
+		<a href="mailto:contact@sethbywater.com">contact@sethbywater.com</a></p>
+	</footer>
+</body>
+</html>
