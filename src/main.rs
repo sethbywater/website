@@ -5,6 +5,8 @@ mod posts;
 use std::{
     path::PathBuf,
     collections::HashMap,
+    sync::mpsc::channel,
+    time::Duration,
 };
 use rocket::{
     http::ContentType,
@@ -15,6 +17,8 @@ use rocket::{
 use tera::{Context, Tera, Function, Value};
 use lazy_static::lazy_static;
 use serde_json::{to_value, from_value};
+use notify::{Watcher, RecursiveMode, watcher};
+
 
 use crate::posts::Posts;
 
@@ -90,7 +94,7 @@ lazy_static! {
 
 #[rocket::main]
 async fn main() {
-    let _= rocket::build()
+    let _ = rocket::build()
         .mount("/", routes![
             index,
             resume,
@@ -100,5 +104,17 @@ async fn main() {
             favicon,
             files,
         ])
-        .launch().await;
+        .launch()
+        .await;
+
+    let (tx, rx) = channel();
+    let mut watcher = watcher(tx, Duration::from_secs(1)).unwrap();
+    watcher.watch("**/*", RecursiveMode::Recursive).unwrap();
+    
+    loop {
+        match rx.recv() {
+            Ok(_event) => println!("Sensing changes. Reloading site"),
+            Err(e) => eprintln!("Watch Error: {:?}", e)
+        }
+    }
 }
