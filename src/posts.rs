@@ -12,7 +12,6 @@ impl Posts {
         for entry in glob(path).expect("Failed to read glob pattern") {
             match entry {
                 Ok(title) => {
-                    println!("DEBUG: found post: {:?}", title);
                     let content = read_to_string(&title).expect("Failed to read file");
                     let parser = Parser::new(&content);
                     let mut html_buf = String::with_capacity(content.capacity() * 3 / 2);
