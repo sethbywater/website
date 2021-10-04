@@ -1,3 +1,12 @@
+blockquote {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  padding-left: 15px;
+  background: #efefef;
+  border-left: 3px solid #ccc;
+} 
+
 .markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
