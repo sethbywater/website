@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block css %}<link rel="stylesheet" href="/css/blog.css">{% endblock css %}
+{% block content %}
+<div class="card">
+    <h1>Recent blogs</h1>
+    {{ posts | sort(attribute="date.num") }}
+    {% for post in posts %}
+    <p><h2><a href=>{{ post.title | title }}</a></h2>
+        {{ post.date.text }}
+    </p>
+    {% endfor %}
+</div>
+{% endblock content %}
