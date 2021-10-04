@@ -1,6 +1,7 @@
 #![feature(decl_macro)]
 
 mod posts;
+mod site;
 
 use std::{
     path::PathBuf,
@@ -19,8 +20,8 @@ use lazy_static::lazy_static;
 use serde_json::{to_value, from_value};
 use notify::{Watcher, RecursiveMode, watcher};
 
-
 use crate::posts::Posts;
+use crate::site::Site;
 
 #[get("/")]
 async fn index() -> (ContentType, String) {
@@ -107,10 +108,14 @@ async fn main() {
         .launch()
         .await;
 
+
+    // Set up a watcher to watch for changes
+    // CUrrently watches everything
     let (tx, rx) = channel();
     let mut watcher = watcher(tx, Duration::from_secs(1)).unwrap();
     watcher.watch("**/*", RecursiveMode::Recursive).unwrap();
     
+    // Wait for events from the watcher and reload site
     loop {
         match rx.recv() {
             Ok(_event) => println!("Sensing changes. Reloading site"),
