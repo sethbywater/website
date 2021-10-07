@@ -1,6 +1,6 @@
 .card {
     width: 950px;
-    height: 600px;
+    height: 550px;
 }
 
 .left {
@@ -10,7 +10,7 @@
 
 .right {
     float: right;
-    width: 445px;
+    width: 420px;
 }
 
 .heading {
@@ -38,5 +38,5 @@ img {
 	}
 	.left { width: 90% }
 	.right { width: 90% }
-	img { width: 300px; }
+	img { width: 70%; }
 }
