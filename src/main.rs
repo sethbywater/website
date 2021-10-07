@@ -2,6 +2,7 @@
 
 mod posts;
 mod site;
+mod date;
 
 use std::{
     path::PathBuf,
