@@ -1,13 +1,34 @@
-{% extends "index.html" %}
-{% block title %}{{ title }}{% endblock title %}
-{% block head %}
-	{{ super() }}
-	<link href="/css/markdown.css" rel="stylesheet">
-{% endblock head %}
-{% block content %}
-<div class="card">
-	<article>
-		{{ get_md(name=title) }}
-	</article>
-</div>
-{% endblock content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog - Seth Bywater</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial scale=1.0"/>
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="topbar">
+		<a class="name" href="/">Seth Bywater</a>
+		<a href="/resume">Resume</a>
+		<a href="/blog">Blog</a>
+		<div style="float: right">
+			<a class="words">Also find me on: </a>
+			<a href="https://github.com/sethbywater"><i class="fa fa-github"></i></a>
+			<a href="https://www.linkedin.com/in/sethbywater/"><i class="fa fa-linkedin"></i></a>
+		</div>
+	</div>
+	<div class"main">
+	    <div class="card">
+		<article>
+			{{ get_md(name=title) }}
+		</article>
+	    </div>
+	<div>
+	<footer>
+		<hr>
+		<p>Author: Seth Bywater<br>
+		<a href="mailto:contact@sethbywater.com">contact@sethbywater.com</a></p>
+	</footer>
+</body>
+</html>
