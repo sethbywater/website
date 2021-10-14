@@ -78,6 +78,10 @@ blockquote {
 	padding: 25px;
 }
 
+.card img {
+	width: 800px;
+}
+
 .about-me {
 	margin-left: auto;
 	margin-right: auto;
