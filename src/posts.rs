@@ -1,7 +1,7 @@
 use std::{collections::BTreeMap, path::PathBuf};
 use std::fs::read_to_string;
 use glob::{glob, GlobError};
-use pulldown_cmark::{html, Parser};
+use pulldown_cmark::{html, Parser, Options};
 
 /// Contains all of the HTML generated from the markdown in the given glob
 pub struct Posts (Box<BTreeMap<PathBuf, String>>);
@@ -13,7 +13,7 @@ impl Posts {
             match entry {
                 Ok(title) => {
                     let content = read_to_string(&title).expect("Failed to read file");
-                    let parser = Parser::new(&content);
+                    let parser = Parser::new_ext(&content, Options::all());
                     let mut html_buf = String::with_capacity(content.capacity() * 3 / 2);
                     html::push_html(&mut html_buf, parser);
 
