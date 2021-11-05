@@ -1,8 +1,3 @@
-.card {
-	background-color: white;
-	box-shadow: 2px 2px 4px #dddddd;
-}
-
 .resume-title {
 	text-align: center;
 	font-style: italic;
@@ -31,13 +26,9 @@ a.resume-btn {
 }
 
 .resume h2 {
-	background-color: #00356B;
-	color: white;
-	padding: 20px;
-	border-radius: 5px;
 	font-size: 40px;
 	font-style: italic;
-	box-shadow: 2px 2px 4px #000000;
+	text-align: center;
 }
 
 .resume h3 {
