@@ -1,6 +1,6 @@
 body {
 	font-family: "Times New Roman", Times, serif;
-	background-color: #EfEfEf;
+	background-color: #efefef;
 	font-size: 20px;
 	line-height: 1.4;
 }
@@ -12,7 +12,11 @@ blockquote {
   margin-left: 50px;
   padding-left: 15px;
   border-left: 3px solid #ccc;
-} 
+}
+
+hr {
+	color: #efefef;
+}
 
 .main {
 	margin-top: 100px;
@@ -32,8 +36,8 @@ blockquote {
 	background-color: #1E282D;
 	top: 0px;
 	left: 0px;
-	right: 0px;	
-	box-shadow: 2px 2px 4px #000000;
+	right: 0px;
+	box-shadow: 4px 4px 6px #dddddd;
 }
 
 .topbar.left {
@@ -43,6 +47,7 @@ blockquote {
 .topbar.right {
 	float: right;
 }
+
 .topbar a {
 	float: left;
 	color: white;
@@ -67,6 +72,36 @@ blockquote {
 	background-color: #797F8B;
 }
 
+.home-card {
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+  width: 950px;
+  height: 550px;
+	padding: 25px;
+	box-shadow: 4px 4px 6px #dddddd;
+}
+
+.home-card .left {
+	float: left;
+	width: 485px;
+}
+
+.home-card .right {
+	float: right;
+	width: 420px;
+}
+
+.home-card img {
+  width: 400px;
+  display: inline;
+  border-radius: 5px;
+	margin: auto;
+}
+
 .card {
 	background-color: white;
 	margin-left: auto;
@@ -76,6 +111,7 @@ blockquote {
 	border-radius: 5px;
 	width: 850px;
 	padding: 25px;
+	box-shadow: 4px 4px 6px #dddddd;
 }
 
 .card img {
@@ -87,6 +123,12 @@ blockquote {
 	margin-right: auto;
 	margin-bottom: 20px;
 	width: 850px;
+	padding: 25px;
+}
+
+.resume {
+	width: 100%;
+	margin-bottom: 20px;
 	padding: 25px;
 }
 
@@ -113,7 +155,7 @@ footer hr {
 }
 
 @media screen and (max-width: 800px) {
-	.card { 
+	.card {
 		width: 100%;
 		margin: 0;
 		border-radius: 0;
@@ -124,4 +166,11 @@ footer hr {
 		width: 800px;
 	}
 	.topbar.right { float: left; }
+	.home-card {
+		width: 100%;
+		height: 1000px;
+	}
+	.left { width: 90% }
+	.right { width: 90% }
+	.home-card img { width: 70%; }
 }
