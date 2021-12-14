@@ -28,15 +28,16 @@ async fn resume() -> (ContentType, String) {
     (ContentType::HTML, TEMPLATES.render("resume.html", &Context::new()).unwrap())
 }
 
-#[get("/works")] 
+#[get("/keys")] 
 async fn works() -> (ContentType, String) {
-    (ContentType::HTML, TEMPLATES.render("works.html", &Context::new()).unwrap())
+    (ContentType::HTML, TEMPLATES.render("keys.html", &Context::new()).unwrap())
 }
 
 #[get("/blog")] 
 async fn blog() -> (ContentType, String) {
     (ContentType::HTML, TEMPLATES.render("blog.html", &Context::new()).unwrap())
 }
+
 #[get("/post/<title>")]
 async fn post(title: String) -> (ContentType, String) {
     let mut context = Context::new();
